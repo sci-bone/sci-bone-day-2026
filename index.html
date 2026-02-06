@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,113 +8,228 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: radial-gradient(circle at center, #111 0%, #000 100%); }
-        .glass-nav { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(20px); }
-        .text-gradient { background: linear-gradient(180deg, #fff 0%, #888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+        }
+
+        .glass-nav {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(180deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-glow {
+            transition: all 0.3s ease;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
     </style>
 </head>
+
 <body class="bg-black text-white antialiased">
 
     <nav class="fixed w-full z-50 glass-nav border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-2 hover:opacity-80 transition">
-                <img src="assets/images/sci-bone_day_2026_logo.png" alt="sci-bone" class="h-6 w-auto">
+            <a href="#" class="flex items-center space-x-2 group">
+                <div
+                    class="h-8 w-12 bg-white/10 rounded flex items-center justify-center border border-white/20 group-hover:border-white/40 transition">
+                    <span class="text-[8px] font-bold text-gray-500 uppercase">Corp Logo</span>
+                </div>
+                <span class="text-sm font-bold tracking-tighter">sci-bone</span>
             </a>
             <div class="space-x-8 text-[12px] font-semibold tracking-widest uppercase hidden md:flex">
                 <a href="#vision" class="text-gray-400 hover:text-white transition">Vision</a>
                 <a href="#technology" class="text-gray-400 hover:text-white transition">Technology</a>
                 <a href="#speakers" class="text-gray-400 hover:text-white transition">Speakers</a>
-                <a href="https://peatix.com/..." target="_blank" class="bg-white text-black px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Register</a>
+                <a href="https://peatix.com/..." target="_blank"
+                    class="bg-white text-black px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Register</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative h-screen flex flex-col items-center justify-center text-center px-6 hero-gradient overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-        
-        <div class="mb-12 animate-fade-in">
-            <img src="assets/images/sci-bone_day_2026_logo.png" alt="sci-bone day 2026" class="h-20 md:h-28 w-auto mx-auto opacity-90">
+    <section
+        class="relative h-[90vh] md:h-screen flex flex-col items-center justify-center text-center px-6 hero-gradient overflow-hidden">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <source src="assets/movie/trailer_scibone_day_run.mp4" type="video/mp4">
+        </video>
+
+        <!-- Overlay for better text visibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black"></div>
+
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none">
         </div>
 
-        <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-tight text-gradient">
-            Motion for Everyone.
-        </h1>
-        
-        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-12 font-medium leading-relaxed">
-            すべての動きを、価値に変える。<br>
-            2026.03.11 — 赤羽イノベーションサイト ＋ オンライン配信
-        </p>
+        <div class="relative z-10 mb-16 animate-fade-in scale-110 md:scale-125">
+            <img src="assets/images/sci-bone_day_2026_logo.png" alt="sci-bone day 2026"
+                class="h-48 md:h-72 w-auto mx-auto drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+        </div>
 
-        <div class="flex flex-col md:flex-row gap-6 items-center">
-            <a href="https://peatix.com/..." class="px-10 py-4 bg-white text-black text-lg font-bold rounded-full hover:scale-105 transition duration-300">
-                参加登録（無料）
-            </a>
-            <div class="text-gray-500 text-sm font-semibold tracking-wide">
-                14:00 - 16:00 JST
+        <div class="relative z-10">
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-tight text-gradient">
+                Motion for Everyone.
+            </h1>
+
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-12 font-medium leading-relaxed mx-auto">
+                すべての動きを、価値に変える。<br>
+                2026.03.11 — 赤羽イノベーションサイト ＋ オンライン配信
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-6 items-center justify-center">
+                <a href="https://peatix.com/..."
+                    class="px-12 py-5 bg-white text-black text-lg font-black rounded-full hover:scale-105 transition duration-300 shadow-xl shadow-white/10">
+                    参加登録（無料）
+                </a>
+                <div class="text-gray-400 text-sm font-bold tracking-widest">
+                    14:00 - 16:00 JST
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="vision" class="py-40 px-6 max-w-5xl mx-auto text-center border-t border-white/5">
+    <section id="vision" class="py-40 px-6 max-w-5xl mx-auto text-center border-t border-white/5 reveal">
         <h2 class="text-blue-500 text-xs font-bold uppercase tracking-[0.3em] mb-8">The Mission</h2>
-        <p class="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-8">
+        <p class="text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-8">
             研究室の知見を、<br><span class="text-gray-500">すべてのスポーツ現場へ。</span>
         </p>
         <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-medium">
-            バイオメカニクスの高度な解析を、誰もが手に取れるテクノロジーへ。sci-boneは、アスリートの可能性をデータの力で解放します。
+            バイオメカニクスの高度な解析を、誰もが手に取れるテクノロジーへ。<br class="hidden md:block">
+            sci-boneは、アスリートの可能性をデータの力で解放します。
         </p>
     </section>
 
-    <section id="technology" class="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-        <div class="group bg-zinc-950 p-12 rounded-[40px] border border-white/5 hover:border-white/20 transition duration-500 overflow-hidden relative">
-            <h3 class="text-3xl font-bold mb-4 tracking-tight">DashAI</h3>
-            <p class="text-gray-400 mb-8 leading-relaxed font-medium">スマホひとつで、プロレベルのランニングフォーム解析を。最新の骨格検知アルゴリズムによる社会実装の現在地。</p>
-            <div class="aspect-video bg-black rounded-3xl border border-white/10 flex items-center justify-center text-zinc-800 overflow-hidden">
-                <p class="text-xs tracking-widest uppercase font-bold">DashAI Demo Video</p>
+    <section id="technology" class="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+        <div
+            class="group bg-zinc-950 p-8 rounded-[40px] border border-white/5 hover-glow reveal overflow-hidden relative">
+            <h3 class="text-2xl font-bold mb-4 tracking-tight">DashAI</h3>
+            <p class="text-gray-400 mb-8 text-sm leading-relaxed font-medium">
+                スマホひとつで、プロレベルのランニングフォーム解析を。最新の骨格検知アルゴリズムによる社会実装の現在地。</p>
+            <div
+                class="aspect-video bg-black rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden">
+                <video autoplay muted loop playsinline
+                    class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700">
+                    <source src="assets/movie/trailer_scibone_day_run.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
 
-        <div class="group bg-zinc-950 p-12 rounded-[40px] border border-white/5 hover:border-white/20 transition duration-500 overflow-hidden relative">
-            <h3 class="text-3xl font-bold mb-4 tracking-tight">Basketball Analysis</h3>
-            <p class="text-gray-400 mb-8 leading-relaxed font-medium">シュート精度をバイオメカニクスで解明。東京大学での研究成果をベースとした高度な動作解析システムを披露。</p>
-            <div class="aspect-video bg-black rounded-3xl border border-white/10 flex items-center justify-center text-zinc-800 overflow-hidden">
-                <p class="text-xs tracking-widest uppercase font-bold">Analysis Visualization</p>
+        <div class="group bg-zinc-950 p-8 rounded-[40px] border border-white/5 hover-glow reveal overflow-hidden relative"
+            style="transition-delay: 0.1s;">
+            <h3 class="text-2xl font-bold mb-4 tracking-tight">Football Analysis</h3>
+            <p class="text-gray-400 mb-8 text-sm leading-relaxed font-medium">
+                キック動作のメカニカルな効率性を可視化。サッカーのパフォーマンス向上に向けた新たな指標を提示。</p>
+            <div
+                class="aspect-video bg-black rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden">
+                <video autoplay muted loop playsinline
+                    class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700">
+                    <source src="assets/movie/trailer_scibone_day_football.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="group bg-zinc-950 p-8 rounded-[40px] border border-white/5 hover-glow reveal overflow-hidden relative"
+            style="transition-delay: 0.2s;">
+            <h3 class="text-2xl font-bold mb-4 tracking-tight">Basketball Analysis</h3>
+            <p class="text-gray-400 mb-8 text-sm leading-relaxed font-medium">
+                シュート精度をバイオメカニクスで解明。東京大学での研究成果をベースとした高度な動作解析システムを披露。</p>
+            <div
+                class="aspect-video bg-black rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden">
+                <video autoplay muted loop playsinline
+                    class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700">
+                    <source src="assets/movie/trailer_scibone_day_basketball.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </section>
 
-    <section id="speakers" class="py-40 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-20">
-            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-gradient">Speakers</h2>
+    <section id="speakers" class="py-40 px-6 max-w-6xl mx-auto reveal">
+        <div class="text-center mb-24">
+            <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-gradient">Speakers</h2>
+            <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-12 text-center">
-            <div>
-                <p class="font-bold text-lg mb-1">Eiichi Miyazawa</p>
-                <p class="text-gray-500 text-sm">CEO / 統括</p>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+            <div class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition">
+                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span class="text-xl font-bold text-gray-600">EM</span>
+                </div>
+                <p class="font-bold text-base mb-1">Eiichi Miyazawa</p>
+                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">CEO / Founder</p>
             </div>
-            <div>
-                <p class="font-bold text-lg mb-1">Kazuya Tomabechi</p>
-                <p class="text-gray-500 text-sm">CTO Candidate / UTokyo</p>
+            <div class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition">
+                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span class="text-xl font-bold text-gray-600">KT</span>
+                </div>
+                <p class="font-bold text-base mb-1">Kazuya Tomabechi</p>
+                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">CTO Candidate</p>
             </div>
-            <div>
-                <p class="font-bold text-lg mb-1">Ryo Otomo</p>
-                <p class="text-gray-500 text-sm">AI Engineer</p>
+            <div class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition">
+                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span class="text-xl font-bold text-gray-600">RO</span>
+                </div>
+                <p class="font-bold text-base mb-1">Ryo Otomo</p>
+                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">AI Lead</p>
             </div>
-            <div>
-                <p class="font-bold text-lg mb-1">Takumi Furuya</p>
-                <p class="text-gray-500 text-sm">Algorithm Engineer</p>
+            <div class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition">
+                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span class="text-xl font-bold text-gray-600">TF</span>
+                </div>
+                <p class="font-bold text-base mb-1">Takumi Furuya</p>
+                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">Algorithm Eng</p>
             </div>
-            <div>
-                <p class="font-bold text-lg mb-1">Takumi Ishitani</p>
-                <p class="text-gray-500 text-sm">R&D Engineer</p>
+            <div
+                class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition col-span-2 md:col-span-1">
+                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span class="text-xl font-bold text-gray-600">TI</span>
+                </div>
+                <p class="font-bold text-base mb-1">Takumi Ishitani</p>
+                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">R&D Engineer</p>
             </div>
         </div>
     </section>
+
+    <script>
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 
     <footer class="py-20 border-t border-white/10 text-center">
         <div class="mb-8">
-            <img src="assets/images/sci-bone_day_2026_logo.png" alt="sci-bone" class="h-5 w-auto mx-auto opacity-50 grayscale">
+            <img src="assets/images/sci-bone_day_2026_logo.png" alt="sci-bone"
+                class="h-5 w-auto mx-auto opacity-50 grayscale">
         </div>
         <p class="text-gray-500 text-xs font-semibold tracking-widest uppercase mb-4">© 2026 sci-bone corporation.</p>
         <div class="flex justify-center space-x-6 text-xs text-gray-400">
@@ -124,4 +240,5 @@
     </footer>
 
 </body>
+
 </html>
