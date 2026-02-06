@@ -1,0 +1,35 @@
+# --- OS generated files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Local Development (Node.js / Tailwind CLI) ---
+# 今後ビルドツールを使う場合に備えて
+node_modules/
+.npm
+dist/
+build/
+
+# --- Python (Local Server / Scripts) ---
+# ローカルで python -m http.server などで確認する際に出るゴミ
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# --- Misc ---
+.env
+.env.local
+.history/
