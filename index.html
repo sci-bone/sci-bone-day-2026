@@ -56,17 +56,14 @@
     <nav class="fixed w-full z-50 glass-nav border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-2 group">
-                <div
-                    class="h-8 w-12 bg-white/10 rounded flex items-center justify-center border border-white/20 group-hover:border-white/40 transition">
-                    <span class="text-[8px] font-bold text-gray-500 uppercase">Corp Logo</span>
-                </div>
+                <img src="assets/images/logo_only.png" alt="sci-bone" class="h-8 w-auto">
                 <span class="text-sm font-bold tracking-tighter">sci-bone</span>
             </a>
             <div class="space-x-8 text-[12px] font-semibold tracking-widest uppercase hidden md:flex">
                 <a href="#vision" class="text-gray-400 hover:text-white transition">Vision</a>
                 <a href="#technology" class="text-gray-400 hover:text-white transition">Technology</a>
                 <a href="#speakers" class="text-gray-400 hover:text-white transition">Speakers</a>
-                <a href="https://peatix.com/..." target="_blank"
+                <a href="https://sci-bone-day-2026.peatix.com/" target="_blank"
                     class="bg-white text-black px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Register</a>
             </div>
         </div>
@@ -91,7 +88,7 @@
             </p>
 
             <div class="flex flex-col md:flex-row gap-6 items-center justify-center">
-                <a href="https://peatix.com/..."
+                <a href="https://sci-bone-day-2026.peatix.com/"
                     class="px-12 py-5 bg-white text-black text-lg font-black rounded-full hover:scale-105 transition duration-300 shadow-xl shadow-white/10">
                     参加登録（無料）
                 </a>
@@ -113,7 +110,14 @@
         </p>
     </section>
 
-    <section id="technology" class="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+    <section id="technology" class="py-40 px-6 max-w-7xl mx-auto reveal">
+        <div class="text-center mb-24">
+            <h2 class="text-blue-500 text-xs font-bold uppercase tracking-[0.3em] mb-4">Technology</h2>
+            <h3 class="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-gradient">Demo & Presentation</h3>
+            <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full mb-6"></div>
+            <p class="text-gray-500 text-sm font-medium tracking-widest">会場：赤羽イノベーションサイト ＋ オンライン配信</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
         <div
             class="group bg-zinc-950 p-12 rounded-[40px] border border-white/5 hover-glow reveal overflow-hidden relative">
             <h3 class="text-3xl font-bold mb-4 tracking-tight">DashAI</h3>
@@ -121,7 +125,7 @@
                 スマホひとつで、プロレベルのランニングフォーム解析を。最新の骨格検知アルゴリズムによる社会実装の現在地。</p>
             <div
                 class="aspect-video bg-black rounded-3xl border border-white/10 flex items-center justify-center text-zinc-800 overflow-hidden">
-                <p class="text-xs tracking-widest uppercase font-bold">DashAI Demo Video</p>
+                <img src="assets/images/dash-ai.png" alt="DashAI Demo" class="w-full h-full object-cover">
             </div>
         </div>
 
@@ -135,14 +139,14 @@
                 <p class="text-xs tracking-widest uppercase font-bold">Analysis Visualization</p>
             </div>
         </div>
+        </div>
     </section>
-
-    <!-- Event Teasers Section -->
     <section class="py-40 bg-zinc-950/30 border-y border-white/5 reveal">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 text-center">
+            <div class="mb-24 text-center">
                 <h2 class="text-blue-500 text-xs font-bold uppercase tracking-[0.3em] mb-4">Experience the Motion</h2>
-                <h3 class="text-4xl md:text-6xl font-black tracking-tighter text-gradient">Event Teasers</h3>
+                <h3 class="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-gradient">Event Teasers</h3>
+                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -199,34 +203,78 @@
             <h2 class="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-gradient">Speakers</h2>
             <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
-            <div class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition">
-                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span class="text-xl font-bold text-gray-600">RM</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 rounded-3xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition flex items-start gap-5">
+                <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="assets/images/miyazawa.png" alt="Rui Miyazawa" class="w-full h-full object-cover">
                 </div>
-                <p class="font-bold text-base mb-1">Rui Miyazawa</p>
-                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">CEO</p>
+                <div>
+                    <p class="font-bold text-lg mb-1">Rui Miyazawa</p>
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-3">代表取締役</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">信州大学大学院修了。新卒で動作解析デバイス、データ活用の新規事業に従事。スタートアップ、国内研究機関を経て、株式会社sci-boneを創業。</p>
+                </div>
             </div>
-            <div class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition">
-                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span class="text-xl font-bold text-gray-600">KT</span>
+            <div class="p-8 rounded-3xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition flex items-start gap-5">
+                <div class="w-20 h-20 bg-gray-800 rounded-full flex-shrink-0 flex items-center justify-center">
+                    <span class="text-2xl font-bold text-gray-600">KT</span>
                 </div>
-                <p class="font-bold text-base mb-1">Kazuya Tomabechi</p>
-                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">Engineer</p>
+                <div>
+                    <p class="font-bold text-lg mb-1">Kazuya Tomabechi</p>
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-3">エンジニア</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">岐阜大学大学院修了後、東京大学大学院にてロボット工学の知見を用いたヒトの運動解析の研究を実施。運動計測のミニマリズム分野で国内外で複数の受賞経験を持つ。コア技術であるバイオメカニクス解析AIの開発および研究推進を担当。</p>
+                </div>
             </div>
-            <div class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition">
-                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span class="text-xl font-bold text-gray-600">TA</span>
+            <div class="p-8 rounded-3xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition flex items-start gap-5">
+                <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="assets/images/akiyoshi.png" alt="Takuma Akiyoshi" class="w-full h-full object-cover">
                 </div>
-                <p class="font-bold text-base mb-1">Takuma Akiyoshi</p>
-                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">Internship</p>
+                <div>
+                    <p class="font-bold text-lg mb-1">Takuma Akiyoshi</p>
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-3">インターン</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">東京大学所属。箱根駅伝2025/2026に2度出場。国内高校との連携プロジェクトにおいて、ケガリスクの推定モデルの構築に取り組む。</p>
+                </div>
             </div>
-            <div class="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition">
-                <div class="w-16 h-16 bg-gray-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span class="text-xl font-bold text-gray-600">RI</span>
+            <div class="p-8 rounded-3xl bg-zinc-900/50 border border-white/5 hover:bg-zinc-900 transition flex items-start gap-5">
+                <div class="w-20 h-20 bg-gray-800 rounded-full flex-shrink-0 flex items-center justify-center">
+                    <span class="text-2xl font-bold text-gray-600">RI</span>
                 </div>
-                <p class="font-bold text-base mb-1">Rinnoshin Ishitani</p>
-                <p class="text-gray-500 text-xs font-semibold uppercase tracking-widest leading-tight">Internship</p>
+                <div>
+                    <p class="font-bold text-lg mb-1">Rinnoshin Ishitani</p>
+                    <p class="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-3">インターン</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">会津大学在学。競技プログラミングアジア予選シルバー。スマートフォンのみで完結する動作解析アプリの高速化を実現。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booth Section -->
+    <section id="booth" class="py-40 px-6 bg-zinc-950/30 border-y border-white/5 reveal">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-blue-500 text-xs font-bold uppercase tracking-[0.3em] mb-4">Hands-on Experience</h2>
+                <h3 class="text-3xl md:text-5xl font-black tracking-tighter text-gradient">Booth</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-8 rounded-3xl bg-black border border-white/10 hover-glow transition">
+                    <p class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">Booth 01</p>
+                    <h4 class="text-xl font-bold mb-3">Dash AI（to C）</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">ユーザー向けアプリの体験</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-black border border-white/10 hover-glow transition">
+                    <p class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">Booth 02</p>
+                    <h4 class="text-xl font-bold mb-3">Dash AI Shop</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">動作解析→あなたに合った提案を受けられる</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-black border border-white/10 hover-glow transition">
+                    <p class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">Booth 03</p>
+                    <h4 class="text-xl font-bold mb-3">Dash AI（スマートボックス）</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">NFCからシューズ登録体験</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-black border border-white/10 hover-glow transition">
+                    <p class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">Booth 04</p>
+                    <h4 class="text-xl font-bold mb-3">バスケシュート体験</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">バイオメカニクス解析によるシュート分析を体験</p>
+                </div>
             </div>
         </div>
     </section>
@@ -251,9 +299,7 @@
         </div>
         <p class="text-gray-500 text-xs font-semibold tracking-widest uppercase mb-4">© 2026 sci-bone corporation.</p>
         <div class="flex justify-center space-x-6 text-xs text-gray-400">
-            <a href="#" class="hover:text-white transition">About Us</a>
-            <a href="#" class="hover:text-white transition">Contact</a>
-            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="https://sci-bone.com/" target="_blank" class="hover:text-white transition">About Us</a>
         </div>
     </footer>
 
